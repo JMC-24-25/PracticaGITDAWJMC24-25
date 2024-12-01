@@ -20,7 +20,7 @@ namespace ejercicioTelegrama_JMC24_25
         private void button1_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
-            char tipoTelegrama = ' ';
+            char tipoTelegrama = 'o'; // JMC 24 - 25 Practica 2.3Ej2 Añadimos una 'o' para que ordinario este puesto por defecto
             int numPalabras = 0;
             double coste;
             //Leo el telegrama
@@ -31,9 +31,10 @@ namespace ejercicioTelegrama_JMC24_25
                 tipoTelegrama = 'u';
             }
             //Obtengo el número de palabras que forma el telegrama
-            numPalabras = textoTelegrama.Length;
+            numPalabras = textoTelegrama.Split(' ', '.', ',', ':', ';').Length;
+            // JMC 24 - 25 Practica 2.3Ej2 Código corregido para capturar las palabras de forma adecuada
             //Si el telegrama es ordinario
-            if (tipoTelegrama == 'o')
+            if (tipoTelegrama == 'o') //JMC 24-25 Practica 2.3Ej2 Punto de interrupcíon para comprobar el tipo
             {
                 if (numPalabras <= 10)
                 {
@@ -41,7 +42,7 @@ namespace ejercicioTelegrama_JMC24_25
                 }
                 else
                 {
-                    coste = 0.5 * numPalabras;
+                    coste = 2.5 + 0.5 * (numPalabras - 10); // JMC 24-25 Corregido el coste de +10palabras ordinario
                 }
             }
             else
