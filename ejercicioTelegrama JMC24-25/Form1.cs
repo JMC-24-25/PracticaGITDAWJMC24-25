@@ -38,7 +38,7 @@ namespace ejercicioTelegrama_JMC24_25
             {
                 if (numPalabras <= 10)
                 {
-                    coste = 2.5;
+                    coste = 3; //JMC24-25 Cambio el coste de 2.5 a 3
                 }
                 else
                 {
@@ -52,7 +52,7 @@ namespace ejercicioTelegrama_JMC24_25
                 {
                     if (numPalabras <= 10)
                     {
-                        coste = 5;
+                        coste = 6; //JMC24-25 Cambio el coste de 5 a 6
                     }
                     else
                     {
