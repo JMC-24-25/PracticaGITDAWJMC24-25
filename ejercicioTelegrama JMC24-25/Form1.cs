@@ -26,7 +26,7 @@ namespace ejercicioTelegrama_JMC24_25
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
             // telegrama urgente?
-            if (chkUrgente.Checked)
+            if (rbUrgente.Checked) //JMC24-25 Añadido radiobutton
             {
                 tipoTelegrama = 'u';
             }
